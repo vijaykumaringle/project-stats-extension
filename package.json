@@ -1,0 +1,60 @@
+{
+    "name": "project-stats-analyzer",
+    "displayName": "Project Stats Analyzer",
+    "description": "Analyze and display project statistics including lines of code, file count, functions, and more",
+    "version": "1.0.0",
+    "publisher": "your-publisher-name",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:projectStats.analyzeProject",
+        "onStartupFinished"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "projectStats.analyzeProject",
+                "title": "Analyze Project Statistics"
+            }
+        ],
+        "views": {
+            "explorer": [
+                {
+                    "id": "projectStatsView",
+                    "name": "Project Statistics"
+                }
+            ]
+        },
+        "viewsContainers": {
+            "activitybar": [
+                {
+                    "id": "projectStats",
+                    "title": "Project Stats",
+                    "icon": "$(bar-chart)"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "test": "node ./out/test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.74.0",
+        "@types/node": "16.x",
+        "@typescript-eslint/eslint-plugin": "^5.59.1",
+        "@typescript-eslint/parser": "^5.59.1",
+        "eslint": "^8.39.0",
+        "glob": "^8.1.0",
+        "mocha": "^10.2.0",
+        "typescript": "^5.0.4"
+    },
+    "dependencies": {}
+}
