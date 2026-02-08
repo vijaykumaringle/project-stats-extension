@@ -1,0 +1,17 @@
+# VS Code extension development files (excluded from final package)
+.vscode-test/**
+.vscode/**
+.gitignore
+.vscodeignore
+tsconfig.json
+README.md
+src/**/*.ts
+src/**/*.map
+!src/extension.js
+!src/extension.js.map
+# Node modules are automatically excluded
+node_modules/**
+# Test files can be excluded to reduce package size
+test/**
+# Sample files can be kept for users to test with
+# sample/**
