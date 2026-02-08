@@ -2,7 +2,7 @@
     "name": "project-stats-analyzer",
     "displayName": "Project Stats Analyzer",
     "description": "Analyze and display project statistics including lines of code, file count, functions, and more",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publisher": "your-publisher-name",
     "engines": {
         "vscode": "^1.74.0"
